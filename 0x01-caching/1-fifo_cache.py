@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
 """fifo cache implementation"""
 from collections import deque
-from typing import Any, Dict, List, Union
+from typing import Any, Union
 from base_caching import BaseCaching
 
 
 class FIFOCache(BaseCaching):
     """fifo cache class"""
-
     def __init__(self):
         """constructore of the class"""
         super().__init__()
