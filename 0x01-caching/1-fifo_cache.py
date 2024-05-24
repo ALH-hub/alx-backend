@@ -12,7 +12,7 @@ class FIFOCache(BaseCaching):
         """constructore of the class"""
         super().__init__()
         self.queue = deque()
-    
+
     def put(self, key: str, item: str) -> None:
         """insert into the fifo cache"""
         if key and item:
@@ -23,7 +23,7 @@ class FIFOCache(BaseCaching):
                 removed = self.queue.popleft()
                 del self.cache_data[removed]
                 print(f"DISCARD: {removed}")
-    
+
     def get(self, key: str) -> Union[Any, None]:
         """get method"""
         return self.cache_data.get(key, None)
